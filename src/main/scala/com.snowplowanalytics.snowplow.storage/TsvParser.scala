@@ -59,7 +59,8 @@ object TsvParser {
   // TODO: switch from throwing error to using scalaz Validation, maybe.
   def getValues(line: String): List[String] = {
     val values = line.split("\t", -1).toList
-    if (values.length != 108){
+    // println(" length " , values.length)
+    if (values.length != 131){
       throw new Error("There seems to have been a parsing error")
     }
     values

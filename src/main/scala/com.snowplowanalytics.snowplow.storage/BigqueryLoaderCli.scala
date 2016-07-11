@@ -70,13 +70,15 @@ object BigqueryLoaderCli {
       //starts authorization process
       val bigqueryInterface = new BigqueryInterface(projectId.value.get)
 
-      if (createTable.value.get) createDatasetAndTable(projectId.value.get, datasetId.value.get, tableId.value.get, bigqueryInterface)
+      println(createTable.hasValue)
+      if (createTable.value != "None" && createTable.value.get) createDatasetAndTable(projectId.value.get, datasetId.value.get, tableId.value.get, bigqueryInterface)
 
       uploadData(projectId.value.get, datasetId.value.get, tableId.value.get, tsvFileLocation.value.get, bigqueryInterface)
 
     }
     catch{
       case e: ArgotUsageException => println(e.message) 
+      println()
     }
 
   }

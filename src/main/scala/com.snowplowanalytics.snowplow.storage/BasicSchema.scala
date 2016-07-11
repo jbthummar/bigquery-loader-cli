@@ -130,7 +130,30 @@ object SnowplowEnrichedEventSchema {
     ("dvce_screenheight", "INTEGER"),
     ("doc_charset", "STRING"),
     ("doc_width", "INTEGER"),
-    ("doc_height", "INTEGER")
+    ("doc_height", "INTEGER"),
+    ("tr_currency", "STRING"),      
+    ("tr_total_base", "FLOAT"),    
+    ("tr_tax_base", "FLOAT"),      
+    ("tr_shipping_base", "FLOAT"), 
+    ("ti_currency", "STRING"),      
+    ("ti_price_base", "FLOAT"),    
+    ("base_currency", "STRING"),   
+    ("geo_timezone", "STRING"),     
+    ("mkt_clickid", "STRING"),      
+    ("mkt_network", "STRING"),      
+    ("etl_tags", "STRING"),         
+    ("dvce_sent_tstamp", "TIMESTAMP"), 
+    ("refr_domain_useri","STRING"),
+    ("refr_dvce_tstamp", "TIMESTAMP"), 
+    ("derived_contexts", "STRING"), 
+    ("domain_sessionid", "STRING"), 
+    ("derived_tstamp", "TIMESTAMP"),   
+    ("event_vendor", "STRING"),     
+    ("event_name", "STRING"),       
+    ("event_format", "STRING"),     
+    ("event_version", "STRING"),    
+    ("event_fingerprint", "STRING"),
+    ("true_tstamp", "TIMESTAMP")      
     )
 
     def names: Array[String] = {
